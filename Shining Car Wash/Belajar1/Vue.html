@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <title>Produk</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .navbar {
+      background-color: orange;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 24px;
+      height: 60px;
+    }
+
+    .halo a {
+      text-decoration: none;
+      font-size: 28px;
+      color: black;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 30px;
+    }
+
+    .nav-links a {
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .content {
+      padding: 40px 20px;
+    }
+
+    .content h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+
+    .card-img {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .img {
+      width: 250px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 16px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .img:hover {
+      transform: translateY(-5px);
+    }
+
+    .img img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .img p {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .footer {
+        background-color: #f4f4f4; /* bisa kamu ubah */
+        padding: 20px;
+        display: flex;
+        justify-content: center;  /* tengah horizontal */
+        align-items: center;      /* tengah vertical kalau ada tinggi */
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .footer a img {
+        height: 50px;
+        width: 50px;
+        padding-left: 5px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="app">
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="halo">
+        <a href="#">{{ message }}</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Kontak</a></li>
+      </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <h1>Produk</h1>
+      <div class="card-img">
+        <div class="img">
+          <img src="./aset/gambar1.jpg" alt="gambar1" />
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, et.</p>
+        </div>
+        <div class="img">
+          <img src="./aset/gambar2.jpg" alt="gambar2" />
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, fugiat.</p>
+        </div>
+        <div class="img">
+          <img src="./aset/gambar3.jpg" alt="gambar3" />
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi, explicabo?</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <a href="https://instagram.com/nadzz.99"><img src="./aset/icon1.png" alt=""></a>
+        <a href="https://wa.me/6285694760520"><img src="./aset/icon2.png" alt=""></a>
+        <a href="https://twitter.com"><img src="./aset/icon3.png" alt=""></a>
+    </div>
+
+  </div>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          message: "Halo",
+          Name: "Muhamad Zidane",
+          Age: 23,
+          Prodi: "Sistem Informasi",
+        };
+      },
+    });
+
+    app.mount("#app");
+  </script>
+</body>
+</html>
